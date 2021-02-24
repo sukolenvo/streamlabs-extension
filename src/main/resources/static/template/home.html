@@ -1,0 +1,30 @@
+<section>
+    <div>
+        <h1 class="dispay-4">Summary</h1>
+    </div>
+    <div>
+        <table class="home-summary">
+            <tbody>
+            <tr>
+                <th>Connected to channel</th>
+                <td>{{connectedChannel || 'Loading...'}}</td>
+            </tr>
+            <tr>
+                <th> Streamlabs authorisation status</th>
+                <td>
+                    <div class="alert alert-danger" ng-show="streamlabsConnected === false">
+                        Missing Streamlabs authorisation. Server won't be able to make any calls to remote API.
+                        <a href="/streamlabs/authorize" class="alert-link">Start Oauth Configuration</a>
+                    </div>
+                    <div class="alert alert-success" ng-show="streamlabsConnected === true">Successfully configured</div>
+                    <span ng-show="streamlabsConnected === undefined">Loading...</span>
+                </td>
+            </tr>
+            <tr>
+                <th>Number of alerts enabled</th>
+                <td>{{alertsEnabled === undefined ? 'Loading...' : alertsEnabled}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

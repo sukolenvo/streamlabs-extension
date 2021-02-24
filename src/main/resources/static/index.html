@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="pageTitle"></title>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/angular-toastr/dist/angular-toastr.css"/>
+    <script data-main="/static/js/main"
+            src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" ui-sref="home">Home</a>
+    <ul class="navbar-nav mr-aut">
+        <li class="nav-item" ui-sref-active="active">
+            <a class="nav-link" ui-sref="createAlert">New Alert</a>
+        </li>
+        <li class="nav-item" ui-sref-active="active">
+            <a class="nav-link" ui-sref="listAlerts">List</a>
+        </li>
+    </ul>
+</nav>
+<div ui-view class="container">Loading...</div>
+</body>
+</html>
